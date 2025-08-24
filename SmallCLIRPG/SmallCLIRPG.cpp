@@ -1,8 +1,15 @@
 
 #include <iostream>
-
+#include "player.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+    player p1;
+    p1.name = "Shahar";
+
+    p1.shoutName();
+
+    return 0;
+
+    
 }
 
