@@ -12,6 +12,6 @@ public:
 
 
 	
-	void attack(player& player_attacked);
+	void attack(player& player);
 	
 };

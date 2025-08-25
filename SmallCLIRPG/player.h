@@ -15,7 +15,7 @@ public:
 	int max_health;
 	void shoutName();
 
-	void attack(enemy& enemy_attacked);
+	void attack(enemy& enemy);
 private:
 
 

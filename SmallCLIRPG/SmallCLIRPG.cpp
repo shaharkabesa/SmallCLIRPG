@@ -2,17 +2,22 @@
 #include <iostream>
 #include "player.h"
 #include <string>
-bool turn;
+bool turn = true;
 player p1;
 enemy e1;
 int main()
 {
+   /* Plans
+   1. clean up both classes of enemy and player
+   2. Create a new class to handle the battlefield instead of this while loop in main
+   3. Add more complexity, for now its only you vs monster attack, down the line introduce choice and enemy basic ai this is a turn based game
    
+   */
 
 
     p1.name = "Shahar";
     e1.enemy_name = "Goblin";
-    p1.damage = 0.5;
+    p1.damage = 1;
     e1.enemy_damage = 2;
     
     std::string winner = "";
