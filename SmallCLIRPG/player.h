@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "enemy.h"
+
 
 class player {
 public:
@@ -10,9 +12,10 @@ public:
 	int health;
 	int experience;
 	int damage;
-	
+	int max_health;
 	void shoutName();
 
+	void attack(enemy& enemy_attacked);
 private:
 
 
