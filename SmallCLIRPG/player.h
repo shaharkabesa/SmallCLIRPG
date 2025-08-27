@@ -2,6 +2,7 @@
 #include <iostream>
 #include "enemy.h"
 
+class enemy;
 
 class player {
 public:

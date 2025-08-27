@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-class player;
 
+class player;
 class enemy {
 public:
 	enemy();
