@@ -5,12 +5,10 @@
 class job;
 player::player() {
 	name = "";
-
 	level = 1;
-	health = 100;
 	experience = 0;
-	damage = 5;
-	max_health = 100;
+	
+	
 	
 
 	
@@ -26,26 +24,11 @@ void player:: attack(enemy& enemy) {
 
 }
 
-void player::set_player_damage(int dmg) {
-	damage = dmg;
-}
 
-int player::get_player_damage() {
-	return damage;
-}
-
-void player::set_player_health(int hp) {
-	health = hp;
-}
-
-int player::get_player_health() {
-	return health;
-}
-
-job player::get_job() {
+job& player::get_job() {
 	return class_job;
 }
 
-void player::set_job(job job_pick) {
+void player::set_job(job& job_pick) {
 	class_job = job_pick;
 }

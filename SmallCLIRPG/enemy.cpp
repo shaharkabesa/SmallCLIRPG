@@ -18,5 +18,5 @@ void enemy::attack(player& player){
 	player.get_job().set_health(newhealth);
 
 	std::cout << enemy_name + " Attacked" + " " + player.name + " With " + std::to_string(enemy_damage) + " Damage" << std::endl;
-	std::cout << player.name + " Has " + std::to_string(player.get_job().get_health()) + "/" + std::to_string(player.get_job().get_health()) + " Health left" << std::endl;
+	std::cout << player.name + " Has " + std::to_string(player.get_job().get_health()) + "/" + std::to_string(player.get_job().get_max_health()) + " Health left" << std::endl;
 }

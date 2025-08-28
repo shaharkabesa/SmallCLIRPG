@@ -9,11 +9,11 @@ public:
 	std::string skill_description = "";
 	
 
-	int get_skill_damage();
+	int get_skill_damage() const;
 	void set_skill_damage(int dmg);
-	int get_mana_cost();
+	int get_mana_cost() const;
 	void set_mana_cost(int cost);
-	int get_stamina_cost();
+	int get_stamina_cost() const;
 	void set_stamina_cost(int cost);
 
 private:
