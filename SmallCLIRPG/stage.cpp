@@ -18,7 +18,7 @@ void stage::battle(enemy& enemy, player& player) {
             turn = true;
         }
 
-        if (player.health <= 0) {
+        if (player.get_job().get_health() <= 0) {
             std::cout << "\nPlayer lost the battle" << std::endl;
             winner = player.name;
             break;

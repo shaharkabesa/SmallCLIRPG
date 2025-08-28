@@ -22,6 +22,6 @@ int skill::get_mana_cost() {
 void skill::set_stamina_cost(int cost) {
 	stamina_cost = cost;
 }
-int skill::get_skill_damage() {
+int skill::get_stamina_cost() {
 	return stamina_cost;
 }

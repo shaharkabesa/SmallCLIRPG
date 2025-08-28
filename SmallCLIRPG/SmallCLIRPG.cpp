@@ -3,7 +3,7 @@
 #include "player.h"
 #include <string>
 #include "stage.h"
-
+#include "job.h"
 int main()
 {
    /* Plans
@@ -13,12 +13,17 @@ int main()
    
    */
     player p1;
+    job warrior("Warrior", "Melee Fighter");
     enemy e1;
     stage st1;
+    warrior.set_health(100);
+    warrior.set_damage(1);
+    
+    p1.set_job(warrior);
 
     p1.name = "Shahar";
     e1.enemy_name = "Goblin";
-    p1.damage = 1;
+
     e1.enemy_damage = 2;
     
     
