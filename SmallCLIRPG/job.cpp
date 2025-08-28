@@ -9,7 +9,7 @@ job::job() {
 job::job(std::string name, std::string description) {
 	job_name = name;
 	job_description = description;
-	max_health = health;
+	
 }
 
 /* Getters */
