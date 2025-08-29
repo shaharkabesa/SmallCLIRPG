@@ -3,7 +3,9 @@
 #include <iostream>
 #include <vector>
 #include "skill.h"
-class skill;
+
+class enemy;
+
 
 class job {
 public:
@@ -23,7 +25,7 @@ public:
 
 	std::vector<skill> get_skills();
 	void add_skill(skill& ability);
-	
+	void use_skill(enemy& enemy);
 
 private:
 	std::string job_name;

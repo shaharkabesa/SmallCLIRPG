@@ -4,9 +4,14 @@
 #include <string>
 #include "stage.h"
 #include "job.h"
+#include "skill.h"
+
 int main()
 {
- 
+    skill fire("Fire", "Throwing fire");
+    fire.set_skill_damage(10);
+    skill ice("Ice", "Throwing Ice");
+    ice.set_skill_damage(5);
     player p1;
     job warrior("Warrior", "Melee Fighter");
     enemy e1;
@@ -16,6 +21,8 @@ int main()
     warrior.set_damage(1);
     
     p1.set_job(warrior);
+    p1.get_job().add_skill(fire);
+    p1.get_job().add_skill(ice);
 
     p1.name = "Shahar";
     e1.enemy_name = "Goblin";

@@ -9,11 +9,11 @@ stage::stage() {
 void stage::battle(enemy& enemy, player& player) {
     while (true) {
         if (turn) {
-            player.attack(enemy);
+            player.actionpick(enemy);
             turn = false;
 
         }
-        else {
+        if(!turn) {
             enemy.attack(player);
             turn = true;
         }

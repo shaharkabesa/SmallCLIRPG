@@ -1,6 +1,6 @@
 #pragma once
-#include <iostream>
-#include <vector>
+
+
 #include <string>
 #include "job.h"
 class enemy;
@@ -17,10 +17,13 @@ public:
 
 	void shoutName();
 
+	
 	void attack(enemy& enemy);
-
 	job& get_job();
 	void set_job(job& jobpick);
+
+	void actionpick(enemy& enemy);
+
 	
 
 private:
