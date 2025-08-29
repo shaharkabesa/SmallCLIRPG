@@ -3,6 +3,7 @@
 #include "vector"
 #include "iostream"
 #include "enemy.h"
+#include <stdexcept>
 job::job() {
 
 }
@@ -68,14 +69,49 @@ void job::add_skill(skill& ability) {
 void job::use_skill(enemy& enemy) {
 	std::string answer;
 	std::string enemy_name = enemy.enemy_name;
-	for (int i = 0; i < skillbook.size(); i++) {
-		std::cout << std::to_string(i + 1) + ") " + skillbook[i].skill_name + "\n";
-	}
+	int skilldamage = 0;
+	int choice = 0;
+	bool validInput = false;
 
-	std::cout << "Pick a skill by the numbers only" << "\n";
-	std::getline(std::cin, answer);
-	int choice = std::stoi(answer) - 1;
-	int skilldamage = skillbook[choice].get_skill_damage();
+	
+	while (!validInput) {
+		std::cout << "\nSkill menu: " << "\n\n";
+		for (int i = 0; i < skillbook.size(); i++) {
+			std::cout << std::to_string(i + 1) + ") " + skillbook[i].skill_name + "\n";
+		}
+		std::cout << "\nPick a skill by the numbers only" << "\n\n";
+		std::getline(std::cin, answer);
+		try {
+			choice = std::stoi(answer) - 1;
+			
+
+
+		}
+		catch (const std::out_of_range& e) {
+			std::cerr << "Pick something from the menu not out of it" << "\n\n";
+			validInput = false;
+
+		}
+		catch (const std::invalid_argument& e) {
+			std::cerr << "Pick something from the menu not out of it" << "\n\n";
+			validInput = false;
+		}
+
+
+
+
+		try {
+			skilldamage = skillbook.at(choice).get_skill_damage();
+			validInput = true;
+		}
+		catch (const std::out_of_range& e) {
+			std::cerr << "Pick something in range" << std::endl;
+			validInput = false;
+		}
+		
+	}
+	
+	
 	enemy.enemy_curr_hp -= skilldamage;
 
 	std::cout << enemy_name + " Took  " + std::to_string(skilldamage) + " Damage" + "\n";

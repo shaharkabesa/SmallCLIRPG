@@ -37,3 +37,4 @@ x64/Debug/SmallCLIRPG.pdb
 .vs/SmallCLIRPG/v17/Solution.VC.db
 SmallCLIRPG/x64/Debug/enemy.obj
 *.obj
+/.vs

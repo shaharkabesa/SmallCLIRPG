@@ -9,8 +9,17 @@ stage::stage() {
 void stage::battle(enemy& enemy, player& player) {
     while (true) {
         if (turn) {
-            player.actionpick(enemy);
-            turn = false;
+            try {
+                player.actionpick(enemy);
+                turn = false;
+            }
+
+            catch (std::string e) {
+                std::cerr << "Used a letter";
+            }
+
+            
+           
 
         }
         if(!turn) {

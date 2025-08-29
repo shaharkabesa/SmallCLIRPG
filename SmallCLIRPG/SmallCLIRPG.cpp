@@ -6,6 +6,7 @@
 #include "job.h"
 #include "skill.h"
 
+
 int main()
 {
     skill fire("Fire", "Throwing fire");
